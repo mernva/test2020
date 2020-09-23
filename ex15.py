@@ -10,8 +10,11 @@ print(txt.read()) #调用txt的read()函数
 print("Type the filename again:")
 file_again =input('>')   #用变量对命令提示符进行定义方便调用
 
-txt_again=open(file_again) #open接受文件类型，返回文件对象，将值赋值给左边
-print(txt_again.read())  #调用txt_again的read()函数
+target_again=open(file_again) #open接受文件类型，返回文件对象，将值赋值给左边
+print(target_again.read())  #调用txt_again的read()函数
+ 
 
 
-print(txt.close()) #关闭
+# with open('/users/wujing/desktop/test2020/ex15.py','r') as txt:
+  #  print(txt.read())
+
