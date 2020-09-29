@@ -61,16 +61,44 @@ while money >0:
             needs_go_on=True
 print('you have no money,game over!!!')
 
- '''     
+     
 
 #1.5生成斐波那契数列的前20个数
-fib=[]
-for i in range(0,20):
+def fib(i):
     if i<=1:
-        fib[i]=1
-        fib.append(fib[i])
+        return 1
     else:
-        fib[i]=fib[i-1]+fib[i-2]
-        fib.append(fib[i])
-print(fib)
+        result=fib(i-1)+fib(i-2)
+        return result
+for i in range(20):
+    print(fib(i),end=' ')
+print()
 
+ 
+#1.6找出10000内的完美数
+#完美数是指除自身外所有整除数之和等于这个数本身的数.
+#6=1+2+3 ,28=1+2+4+7+14
+
+for num in range(1,10000):
+    sum =0   #初始定义赋值
+    for i in range(1,num):
+        if num % i ==0:
+            sum+=i
+    if sum == num:
+        print(num)
+
+'''
+
+#1.7输出100以内的所有素数
+#素数是指被1和自身整除的正整数(不包括1)
+
+import math
+for num in range(2,100):
+    is_prime=True
+    for factor in range(2,int(math.sqrt(num))+1):
+        if num % factor == 0:
+            is_prime=False
+            break
+    if is_prime:
+        print(num,end=' ')
+print()

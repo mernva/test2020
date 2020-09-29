@@ -1,3 +1,4 @@
+'''
 #1.1 判断1-100之间的奇数之和
 #可以用''' '''或者""" """进行多行注释
 
@@ -7,12 +8,11 @@ for x in range(1,101):
         sum += x
 print(sum)
 
-'''
 sum=0
 for x in range(1,101,2):
     sum+=x
 print(sum)
-'''
+
 
 
  #1.2 猜数字游戏
@@ -73,7 +73,7 @@ for target in range(x,0,-1):  #从两个数中较大数做递减的循环
         print('%d和%d的最大公约数是:%d' %(x,y,target))
         print('%d和%d的最小倍数是:%d' %(x,y,x*y//target))
         break
-
+'''
 
 #1.6打印三角形
 row=int(input('请输入行数:'))
